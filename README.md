@@ -1,90 +1,63 @@
 # Socio-economic Characteristics of the USA
 
-`Socio-economic Characteristics of the USA` is an interactive analytical dashboard built with Next.js for presenting key socio-economic patterns of the United States in a visual and compact format. The app combines charts, comparison tables, and short analytical conclusions in a single interface aimed at coursework, presentations, and exploratory study.
+An interactive analytical dashboard of key socio-economic patterns of the United States — a geography coursework/research project built with **Next.js + React + TypeScript**. Combines charts, comparison tables, and short analytical conclusions in a single interface.
 
-## What the application includes
+> **Status: experiment** — research/coursework project, not a production service.
 
-- A resource tab with comparative data on coal, oil, gas, iron ore, copper, zinc, lead, and lithium
-- A Zipf-law tab for the largest US cities, including rank-size comparison and multi-year population dynamics
-- A Lorenz-curve tab for population concentration by macroregion and area share
-- A summary tab with condensed conclusions and development factors
-- A mobile-friendly tabbed interface built with reusable UI components and Recharts visualizations
+## Features
+
+- **Resources tab**: comparative data on coal, oil, gas, iron ore, copper, zinc, lead, lithium
+- **Zipf's law tab**: largest US cities — rank-size comparison and multi-year population dynamics
+- **Lorenz curve tab**: population concentration by macroregion vs. area share
+- **Summary tab**: condensed conclusions and development factors
+- Mobile-friendly tabbed UI (reusable components + Recharts visualizations)
 
 ## Analytical scope
 
-The dashboard focuses on three core dimensions of the US socio-economic profile:
+Three core dimensions of the US socio-economic profile:
 
-- `Resource availability`: reserves, annual extraction, world ranking, and estimated years of sufficiency
-- `Urban system structure`: comparison of actual city-size hierarchy with the ideal Zipf distribution
-- `Population concentration`: imbalance between area and population across major US macroregions
+- Resource availability: reserves, annual extraction, world ranking, estimated years of sufficiency
+- Urban system structure: actual city-size hierarchy vs. the ideal Zipf distribution
+- Territorial concentration: Lorenz curve analysis of population vs. area
 
-The current version is a presentation-oriented dashboard: the data is embedded directly in the frontend for fast loading and predictable rendering.
-
-## Tech stack
-
-- Next.js 16
-- React 19
-- TypeScript
-- Tailwind CSS 4
-- shadcn/ui + Radix UI
-- Recharts
-- Prisma + SQLite scaffold included for future backend expansion
-
-## Local development
-
-1. Install dependencies:
+## Local run
 
 ```bash
 npm install
-```
-
-2. Create an environment file:
-
-```bash
-cp .env.example .env.local
-```
-
-3. Run the app:
-
-```bash
 npm run dev
 ```
 
-The project will be available at `http://localhost:3000`.
+Open `http://localhost:3000`. Build: `npm run build && npm run start`.
 
-## Available scripts
+---
+
+# Социально-экономическая характеристика США
+
+Интерактивный аналитический дашборд ключевых социально-экономических закономерностей США — учебно-исследовательский проект по географии на **Next.js + React + TypeScript**. Объединяет графики, сравнительные таблицы и краткие аналитические выводы в одном интерфейсе.
+
+> **Статус: experiment** — исследовательский/учебный проект, не production-сервис.
+
+## Возможности
+
+- **Вкладка «Ресурсы»**: сравнительные данные по углю, нефти, газу, железной руде, меди, цинку, свинцу, литию
+- **Вкладка «Закон Ципфа»**: крупнейшие города США — сравнение «ранг–размер» и динамика населения за несколько лет
+- **Вкладка «Кривая Лоренца»**: концентрация населения по макрорегионам против доли площади
+- **Вкладка «Итоги»**: сжатые выводы и факторы развития
+- Мобильный адаптивный интерфейс с вкладками (переиспользуемые компоненты + визуализации Recharts)
+
+## Аналитический охват
+
+Три ключевых измерения социально-экономического профиля США:
+
+- Обеспеченность ресурсами: запасы, годовая добыча, место в мире, расчётные годы обеспеченности
+- Структура городской системы: фактическая иерархия городов против идеального распределения Ципфа
+- Территориальная концентрация: анализ кривой Лоренца «население против площади»
+
+## Локальный запуск
 
 ```bash
+npm install
 npm run dev
-npm run build
-npm run start
-npm run lint
-npm run db:push
-npm run db:generate
-npm run db:migrate
-npm run db:reset
 ```
 
-## Project structure
-
-- `src/app/page.tsx` - the full dashboard interface and embedded analytical datasets
-- `src/app/layout.tsx` - app metadata and shell
-- `src/components/ui/` - reusable UI primitives
-- `public/` - static assets
-- `prisma/schema.prisma` - backend schema scaffold
-- `.zscripts/` - helper scripts for local install, build, and start flows
-
-## Current implementation notes
-
-- The dashboard itself is already functional as a client-rendered analytical app
-- `src/app/api/route.ts` and Prisma are present as scaffolding, but the main dashboard does not depend on a live backend yet
-- The repository is structured so it can evolve from a static analytical presentation into a richer data application later
-
-## Use case
-
-This project is well suited for:
-
-- geography and economics coursework,
-- interactive presentation of statistical findings,
-- rapid prototyping of country profile dashboards,
-- adaptation to other countries or regions using the same visualization structure.
+Откройте `http://localhost:3000`. Сборка: `npm run build && npm run start`.
